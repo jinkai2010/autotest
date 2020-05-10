@@ -23,6 +23,7 @@ public class SuitCaseReportController {
 
     @RequestMapping(value = "/{suitid}")
     public Map<String,Object> getSuitCaseBuildReport(@PathVariable  Integer suitid){
+        LOG.debug("测试一下");
         LOG.debug("查询套件下构建历史报表:"+suitid);
         Map<String,Object> resultMap = new HashMap<String,Object>();
         List<SuitCaseReport> lists = suitCaseReportService.selectBySuit(suitid);
